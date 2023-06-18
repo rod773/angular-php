@@ -1,6 +1,10 @@
 
 <?php
 
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Headers:  Content-Type, X-Auth-Token, Authorization, Origin');
+header('Access-Control-Allow-Methods:  POST, PUT, GET');
+
 require_once 'controladores/rutas.controlador.php';
 require_once 'controladores/cursos.controlador.php';
 require_once 'controladores/clientes.controlador.php';

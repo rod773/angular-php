@@ -6,17 +6,12 @@ class ControladorClientes {
 
 
          
-        echo "<pre>";
-        print_r(array_filter($datos));
-        echo "<pre>";
         
+        //print_r(array_filter($datos));
+       
 
-        //$json = array(
-        //    "detalle" => "estas en la vista registro"
-        //);
+        echo json_encode($datos, true);
 
-        //echo json_encode($json, true);
-
-        //return;
+        return;
     }
 }

@@ -2,13 +2,21 @@
 
 class ControladorClientes {
 
-    public function create() {
-        $json = array(
-            "detalle" => "estas en la vista registro"
-        );
+    public function create($datos) {
 
-        echo json_encode($json, true);
 
-        return;
+         
+        echo "<pre>";
+        print_r(array_filter($datos));
+        echo "<pre>";
+        
+
+        //$json = array(
+        //    "detalle" => "estas en la vista registro"
+        //);
+
+        //echo json_encode($json, true);
+
+        //return;
     }
 }

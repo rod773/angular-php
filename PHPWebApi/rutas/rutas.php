@@ -33,12 +33,27 @@ if (count(array_filter($arrayRutas)) == 1) {
         }
 
         if (array_filter($arrayRutas)[2] == "registro") {
-            if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == 'GET') {
 
+
+            if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
+
+                $datos = array(
+                    "nombre"=> $_POST['nombre'],
+                    "apellido"=> $_POST['apellido'],
+                    "email"=> $_POST['email'],
+                    );
+                /*
+                echo "<pre>";
+                print_r(array_filter($datos));
+                echo "<pre>";
+                */
+                
                 $clientes = new ControladorClientes();
 
-                $clientes->create();
+                $clientes->create($datos);
+                
             }
+
         }
     } else {
         if (array_filter($arrayRutas)[2] == "cursos" && is_numeric(array_filter($arrayRutas)[3]) == "cursos") {
